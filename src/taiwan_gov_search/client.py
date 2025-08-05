@@ -33,6 +33,28 @@ class TaiwanGovClient:
             "Accept": "application/json",
         })
 
+    def _parse_dgbas_field(self, dgbas_field: str) -> List[DgbasEntry]:
+        """
+        Parse DGBAS field from tab-delimited string format.
+        
+        Args:
+            dgbas_field (str): Tab-delimited string like "0119\t其他農作物栽培業"
+            
+        Returns:
+            List[DgbasEntry]: Parsed DGBAS entries
+        """
+        dgbas = []
+        if dgbas_field:
+            # Split by newlines first, then by tabs
+            for line in dgbas_field.split('\n'):
+                line = line.strip()
+                if '\t' in line:
+                    parts = line.split('\t', 1)
+                    if len(parts) == 2:
+                        code, name = parts
+                        dgbas.append(DgbasEntry(code=code.strip(), name=name.strip()))
+        return dgbas
+
     def get_business_items(self, business_item_code: Optional[str] = None,
                            top: int = 100, skip: int = 0,
                            format_: str = 'json') -> List[BusinessItem]:
@@ -55,24 +77,23 @@ class TaiwanGovClient:
 
         url = f"{self.BASE_URL}{self.BUSINESS_ITEMS_ENDPOINT}"
         response = self.session.get(url, params=params, timeout=30)
-        response.raise_for_status()
+        response.raise_for_status() 
         data = response.json()
 
         entries = data.get("value", data) if isinstance(data, dict) else data
 
         results = []
         for entry in entries:
-            dgbas_field = entry.get("DGBAS", [])
-            dgbas = [DgbasEntry(code=item["Code"], name=item["Name"]) for item
-                     in dgbas_field]
+            dgbas_field = entry.get("Dgbas", "")  
+            dgbas = self._parse_dgbas_field(dgbas_field)
 
             results.append(BusinessItem(
                     category=entry.get("Category", ""),
                     category_name=entry.get("Category_Name", ""),
                     classes=entry.get("Classes", ""),
                     classes_name=entry.get("Classes_Name", ""),
-                    subcategory=entry.get("SubCategory", ""),
-                    subcategories_name=entry.get("SubCategories_Name", ""),
+                    subcategory=entry.get("Subcategory", ""),
+                    subcategories_name=entry.get("Subcategories_Name", ""),
                     business_item=entry.get("Business_Item", ""),
                     business_item_desc=entry.get("Business_Item_Desc", ""),
                     business_item_content=entry.get("Business_Item_Content", ""),

@@ -1,3 +1,21 @@
-# Default ignored files
-/shelf/
-/workspace.xml
+# Python
+__pycache__/
+*.pyc
+
+# Environments
+.env
+.venv/
+env/
+
+# IDEs
+.vscode/
+.idea/
+
+# Logs and system files
+*.log
+.DS_Store
+
+# Output files
+*.zip
+*.tar
+*.bak

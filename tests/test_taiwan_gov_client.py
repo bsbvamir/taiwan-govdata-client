@@ -16,12 +16,12 @@ def test_get_business_items(client):
                 "Category_Name": "Agriculture",
                 "Classes": "A1",
                 "Classes_Name": "Crop",
-                "SubCategory": "A11",
-                "SubCategories_Name": "Rice",
+                "Subcategory": "A11",
+                "Subcategories_Name": "Rice",
                 "Business_Item": "A1101",
                 "Business_Item_Desc": "Rice planting",
                 "Business_Item_Content": "Rice growing",
-                "DGBAS": [{"Code": "001", "Name": "Agency 1"}],
+                "Dgbas": "0111\t稻作栽培業\n0112\t雜糧栽培業",
             }
         ]
     }

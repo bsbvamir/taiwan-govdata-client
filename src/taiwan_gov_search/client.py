@@ -17,7 +17,8 @@ class TaiwanGovClient:
         session (requests.Session): Reusable HTTP session for API requests.
     """
 
-    BASE_URL = "https://data.gcis.nat.gov.tw/od/data/api/FCB90AB1-E382-45CE-8D4F-394861851E28"
+    BASE_URL = "https://data.gcis.nat.gov.tw/od/data/api/"
+    BUSINESS_ITEMS_ENDPOINT = "FCB90AB1-E382-45CE-8D4F-394861851E28"
 
     def __init__(self):
         """
@@ -27,6 +28,10 @@ class TaiwanGovClient:
         for querying the government API.
         """
         self.session = requests.Session()
+        self.session.headers.update({
+            "User-Agent": "taiwan-govdata-client/0.1.0",
+            "Accept": "application/json",
+        })
 
     def get_business_items(self, business_item_code: Optional[str] = None,
                            top: int = 100, skip: int = 0,
@@ -44,10 +49,12 @@ class TaiwanGovClient:
         """
 
         params = {"$format": format_, "$top": top, "$skip": skip, }
+
         if business_item_code:
             params["$filter"] = f"Business_Item eq '{business_item_code}'"
 
-        response = self.session.get(self.BASE_URL, params=params, timeout=30)
+        url = f"{self.BASE_URL}{self.BUSINESS_ITEMS_ENDPOINT}"
+        response = self.session.get(url, params=params, timeout=30)
         response.raise_for_status()
         data = response.json()
 
@@ -59,8 +66,7 @@ class TaiwanGovClient:
             dgbas = [DgbasEntry(code=item["Code"], name=item["Name"]) for item
                      in dgbas_field]
 
-            results.append(
-                BusinessItem(
+            results.append(BusinessItem(
                     category=entry.get("Category", ""),
                     category_name=entry.get("Category_Name", ""),
                     classes=entry.get("Classes", ""),

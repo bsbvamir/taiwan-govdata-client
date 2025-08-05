@@ -22,19 +22,22 @@ class BusinessItem:
 
     @classmethod
     def from_api(cls, data: Dict) -> "BusinessItem":
-        raw_dgbas = data.get("DGBAS", "")
+        raw_dgbas = data.get("Dgbas", "")
         dgbas_list = []
         if raw_dgbas:
-            for entry in raw_dgbas.split(";"):
-                parts = entry.strip().split(":")
-                if len(parts) == 2:
-                    dgbas_list.append(DgbasEntry(code=parts[0], name=parts[1]))
+            for line in raw_dgbas.split('\n'):
+                line = line.strip()
+                if '\t' in line:
+                    parts = line.split('\t', 1)
+                    if len(parts) == 2:
+                        code, name = parts
+                        dgbas_list.append(DgbasEntry(code=code.strip(), name=name.strip()))
         return cls(category=data.get("Category", ""),
                    category_name=data.get("Category_Name", ""),
                    classes=data.get("Classes", ""),
                    classes_name=data.get("Classes_Name", ""),
-                   subcategory=data.get("SubCategory", ""),
-                   subcategories_name=data.get("SubCategory_Name", ""),
+                   subcategory=data.get("Subcategory", ""),
+                   subcategories_name=data.get("Subcategories_Name", ""),
                    business_item=data.get("Business_Item", ""),
                    business_item_desc=data.get("Business_Item_Desc", ""),
                    business_item_content=data.get("Business_Item_Content", ""),

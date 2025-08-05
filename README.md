@@ -127,3 +127,20 @@ if __name__ == "__main__":
         print(f"Description: {item.business_item_desc}")
         print(f"Content: {item.business_item_content}")
 ```
+
+## Implemented Endpoints
+
+### Business Items Classification API
+
+| Endpoint | Method | Description | Parameters |
+|----------|--------|-------------|------------|
+| `/od/data/api/FCB90AB1-E382-45CE-8D4F-394861851E28` | GET | Retrieve business item classification data | `$format`, `$top`, `$skip`, `$filter` |
+
+### Supported Parameters
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `$format` | string | No | `json` | Response format (json) |
+| `$top` | integer | No | `100` | Number of records to retrieve (pagination limit) |
+| `$skip` | integer | No | `0` | Number of records to skip (pagination offset) |
+| `$filter` | string | No | - | OData filter expression (e.g., `Business_Item eq 'B101010'`) |

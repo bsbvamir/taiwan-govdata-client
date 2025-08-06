@@ -4,9 +4,11 @@ import pytest
 from unittest.mock import patch, MagicMock
 from taiwan_gov_search.client import TaiwanGovClient
 
+
 @pytest.fixture
 def client():
     return TaiwanGovClient()
+
 
 def test_get_business_items(client):
     mock_payload = {

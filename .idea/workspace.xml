@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea532300-3e9d-4ea8-be18-b73d1e64257d" name="Changes" comment="" />
+    <list default="true" id="ea532300-3e9d-4ea8-be18-b73d1e64257d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/tests/test_integration_sample.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_integration_sample.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_taiwan_gov_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_taiwan_gov_client.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,14 +31,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/amibe/firsttask",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/amibe/firsttask&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\amibe\firsttask\src\taiwan_gov_search" />
@@ -43,7 +46,7 @@
       <recent name="C:\Users\amibe\firsttask\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests in test_integration_sample.py">
+  <component name="RunManager" selected="Python tests.Python tests for test_taiwan_gov_client.test_get_business_items">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="firsttask" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -65,6 +68,34 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests for test_integration_sample.test_dgbas_parsing_edge_cases" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="firsttask" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_integration_sample.test_dgbas_parsing_edge_cases&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_integration_sample.test_get_business_items_live" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="firsttask" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_integration_sample.test_get_business_items_live&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="Python tests for test_integration_sample.test_known_business_item_returns_results" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="firsttask" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -76,6 +107,20 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;test_integration_sample.test_known_business_item_returns_results&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_integration_sample.test_real_api_response_structure" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="firsttask" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_integration_sample.test_real_api_response_structure&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -93,55 +138,13 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for tests.test_integration_sample::test_known_business_item_returns_results" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="firsttask" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.test_integration_sample::test_known_business_item_returns_results&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for tests.test_integration_sample.test_known_business_item_returns_results" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="firsttask" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.test_integration_sample.test_known_business_item_returns_results&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests in test_integration_sample.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="firsttask" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_integration_sample.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests in test_integration_sample.py" />
         <item itemvalue="Python tests.Python tests for test_taiwan_gov_client.test_get_business_items" />
+        <item itemvalue="Python tests.Python tests for test_integration_sample.test_real_api_response_structure" />
+        <item itemvalue="Python tests.Python tests for test_integration_sample.test_dgbas_parsing_edge_cases" />
+        <item itemvalue="Python tests.Python tests for test_integration_sample.test_get_business_items_live" />
         <item itemvalue="Python tests.Python tests for test_integration_sample.test_known_business_item_returns_results" />
-        <item itemvalue="Python tests.Python tests for tests.test_integration_sample.test_known_business_item_returns_results" />
-        <item itemvalue="Python tests.Python tests for tests.test_integration_sample::test_known_business_item_returns_results" />
       </list>
     </recent_temporary>
   </component>

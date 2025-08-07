@@ -70,7 +70,7 @@ class TaiwanGovClient:
             List[BusinessItem]: Parsed list of BusinessItem objects from API results.
         """
 
-        params = {"$format": format_, "$top": top, "$skip": skip, }
+        params = {"$format": format_, "$    top": top, "$skip": skip, }
 
         if business_item_code:
             params["$filter"] = f"Business_Item eq '{business_item_code}'"
